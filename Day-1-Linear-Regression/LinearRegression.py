@@ -18,12 +18,12 @@ class LinearRegression:
         """
         return torch.mm(torch.transpose(w, 0, 1), X)
 
-    def cost(self, ypred, y):
+    def loss(self, ypred, y):
         """
         :desc c: cost function - to measure the loss between estimated vs ground truth
         """
-        c = 1 / self.m * torch.sum(torch.pow(ypred - y, 2))
-        return c
+        l = 1 / self.m * torch.sum(torch.pow(ypred - y, 2))
+        return l
 
     def gradient_descent(self, w, X, y, ypred):
         """
@@ -47,10 +47,10 @@ class LinearRegression:
 
         for iteration in range(1, self.iterations + 1):
             ypred = self.y_pred(X, w)
-            cost = self.cost(ypred, y)
+            cost = self.loss(ypred, y)
 
             if iteration % 100 == 0:
-                print(f'Cost at iteration {iteration} is {cost}')
+                print(f'Loss at iteration {iteration} is {cost}')
             w = self.gradient_descent(w, X, y, ypred)
 
         return w
