@@ -2,7 +2,7 @@ import torch
 from sklearn.datasets import load_breast_cancer
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
-import numpy as np
+
 
 class Node:
     def __init__(self, gini, num_samples, num_samples_per_class, predicted_class):
@@ -39,8 +39,8 @@ class DecisionTree_CART():
         :var m: Sample Size
         """
         m = y.shape[0]
-        
-        return 1.0 - sum((torch.sum(y == c) // m) ** 2 for c in range(self.n_classes_))
+
+        return 1.0 - sum((torch.sum(y == c).item() // m) ** 2 for c in range(self.n_classes_))
 
     def _best_split(self, X, y):
         """Find the best split for a node.
@@ -61,7 +61,7 @@ class DecisionTree_CART():
             return None, None
 
         # Count of each class in the current node.
-        num_parent = [torch.sum(y == c) for c in range(self.n_classes_)]
+        num_parent = [torch.sum(y == c).item() for c in range(self.n_classes_)]
         print(f'num_parent {num_parent}')
 
         # Gini of current node.
@@ -149,6 +149,14 @@ class DecisionTree_CART():
         return node.predicted_class
 
 if __name__ == "__main__":
+    """
+    :variable X: Input tensor with 30 features
+    :target y: Output tensor with 2 classes
+    
+    * Converting Numpy array into torch tensor.
+    * Creating DecisionTree Object with max_depth 5.
+    * Fit and predict with DecisionTree Object.
+    """
     breast_cancer = load_breast_cancer()
     X = breast_cancer['data']
     y = breast_cancer['target']
