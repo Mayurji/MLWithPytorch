@@ -15,7 +15,7 @@ class Node:
         self.left = None
         self.right = None
 
-class DecisionTree_CART():
+class DecisionTree_CART:
     def __init__(self, max_depth=None):
         self.max_depth = max_depth
 
