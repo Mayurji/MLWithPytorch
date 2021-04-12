@@ -10,6 +10,7 @@ Objective of the repository is to learn and build machine learning models using 
 * KMeans Clustering
 * Naive Bayes
 * K Nearest Neighbour (KNN)
+* Support Vector Machine
 * To be Continued
 
 ## References
