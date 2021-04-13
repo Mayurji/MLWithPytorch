@@ -12,7 +12,7 @@ Objective of the repository is to learn and build machine learning models using 
 * K Nearest Neighbour (KNN)
 * Support Vector Machine
 * tf-idf Model
-* PCA
+* Principal Components Analysis
 
 ## Let me know if there is any correction. Feedback is welcomed.
 
