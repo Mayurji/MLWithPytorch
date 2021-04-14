@@ -14,7 +14,7 @@ Objective of the repository is to learn and build machine learning models using 
 * tf-idf Model
 * Principal Components Analysis
 
-## Let me know if there is any correction. Feedback is welcomed.
+### Let me know if there is any correction. Feedback is welcomed.
 
 ## References
 
