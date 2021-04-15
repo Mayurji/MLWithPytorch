@@ -143,7 +143,6 @@ class Regression:
             mse = torch.mean(0.5 * (y - y_pred)**2 + self.regularization(self.w))
             self.training_error[epoch] = mse.item()
             grad_w = torch.mm(-(y - y_pred).T, X).T + self.regularization.grad(self.w)
-
             self.w -= self.lr * grad_w
 
 
@@ -164,7 +163,6 @@ if __name__ == '__main__':
     regression = Regression(learning_rate=0.0001, epochs=3000, regression_type='lasso')
     regression.fit(regression.normalization(regression.polynomial_features(x_train, degree=1)), y_train)
     y_pred = regression.predict(regression.normalization(regression.polynomial_features(x_test, degree=1)))
-    print(y_pred)
     plt.figure(figsize=(6, 6))
     sb.scatterplot(list(regression.training_error.keys()), list(regression.training_error.values()))
     plt.show()
