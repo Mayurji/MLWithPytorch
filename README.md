@@ -14,7 +14,7 @@ Objective of the repository is to learn and build machine learning models using 
 * tf-idf Model
 * Principal Components Analysis
 * Lasso and Ridge Regression
-* Gradient Boosting (On the Way)
+* Gradient Boosting (On the Way) or GMM
 
 ### Let me know if there is any correction. Feedback is welcomed.
 
