@@ -61,11 +61,6 @@ class RidgeRegularization:
         """
         :param w: weight vector
         :return: weight update based on sign value, it helps in reducing the coefficient values from W vector
-        torch.sign:
-        a
-        tensor([ 0.7000, -1.2000,  0.0000,  2.3000])
-        torch.sign(a)
-        tensor([ 1., -1.,  0.,  1.])
         """
         return self.alpha * w
 
