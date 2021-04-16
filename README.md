@@ -1,10 +1,10 @@
-## 30 Days Of Machine Learning Using Pytorch
-
 ![MLWithPyTorch](/mlwithpytorch.png)
+
+## 30 Days Of Machine Learning Using Pytorch
 
 Objective of the repository is to learn and build machine learning models using Pytorch.
 
-**List of Algorithms**
+**List of Algorithms Covered**
 
 * Linear Regression
 * Logistic Regression
