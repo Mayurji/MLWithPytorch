@@ -18,6 +18,7 @@ Objective of the repository is to learn and build machine learning models using 
 * Lasso and Ridge Regression
 * Gaussian Mixture Model
 * Linear Discriminant Analysis
+* Adaboost Algorithm
 
 ### Let me know if there is any correction. Feedback is welcomed.
 
