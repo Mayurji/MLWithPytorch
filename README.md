@@ -17,7 +17,7 @@ Objective of the repository is to learn and build machine learning models using 
 📌 Day 9 - Principal Components Analysis \
 📌 Day 10 - Lasso and Ridge Regression \
 📌 Day 11 - Gaussian Mixture Model \
-📌 Day 12 - Linear Discriminant Analysis \ 
+📌 Day 12 - Linear Discriminant Analysis \
 📌 Day 13 - Adaboost Algorithm \
 📌 Day 14 - DBScan Clustering \
 📌 Day 15 - Multi-Class LDA \
