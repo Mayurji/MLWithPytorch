@@ -19,6 +19,8 @@ Objective of the repository is to learn and build machine learning models using 
 * Gaussian Mixture Model
 * Linear Discriminant Analysis
 * Adaboost Algorithm
+* DBScan Clustering
+* Multi-Class LDA
 
 ### Let me know if there is any correction. Feedback is welcomed.
 
