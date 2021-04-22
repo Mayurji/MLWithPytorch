@@ -21,7 +21,7 @@ Objective of the repository is to learn and build machine learning models using 
 📌 Day 13 - Adaboost Algorithm \
 📌 Day 14 - DBScan Clustering \
 📌 Day 15 - Multi-Class LDA \
-📌 Day 16 - Bayesian Regression (wait - Adding Comments)
+📌 Day 16 - Bayesian Regression
 
 ### Let me know if there is any correction. Feedback is welcomed.
 
