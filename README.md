@@ -22,7 +22,8 @@ Objective of the repository is to learn and build machine learning models using 
 📌 Day 14 - DBScan Clustering \
 📌 Day 15 - Multi-Class LDA \
 📌 Day 16 - Bayesian Regression \
-📌 Day 17 - K-Medoids
+📌 Day 17 - K-Medoids \
+📌 Day 18 - TSNE
 
 ### Let me know if there is any correction. Feedback is welcomed.
 
