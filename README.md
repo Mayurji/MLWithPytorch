@@ -24,7 +24,8 @@ Objective of the repository is to learn and build machine learning models using 
 📌 Day 16 - Bayesian Regression \
 📌 Day 17 - K-Medoids \
 📌 Day 18 - TSNE \
-📌 Day 19 - Factorization Machines - Coming Up!
+📌 Day 19 - ElasticNet Regression \
+📌 Day 20 - Factorization Machines
 
 ### Let me know if there is any correction. Feedback is welcomed.
 
