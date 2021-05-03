@@ -27,14 +27,13 @@ class AffinityPropagation:
             r[range(N), first_max_indices] = self.s[range(N), first_max_indices] - second_max[range(N)]
             r = self.alpha * old_r + (1 - self.alpha) * r
             rp = torch.maximum(r, torch.scalar_tensor(0))
-            for i, e in enumerate(torch.diag(r)):
-                rp[i][i] = e
+            m = rp.size(0)
+            rp.as_strided([m], [m + 1]).copy_(torch.diag(r))
             a = torch.reshape(torch.repeat_interleave(torch.sum(rp, dim=0), N),(N, N)).T - rp
             da = torch.diag(a)
             a = torch.minimum(a, torch.scalar_tensor(0))
-            #a = torch.diagonal(a).fill_(da)
-            for i, e in enumerate(da):
-                a[i][i] = e
+            k = a.size(0)
+            a.as_strided([k], [k+1]).copy_(da)
             a = self.alpha * old_a + (1 - self.alpha) * a
 
             return r, a
@@ -67,4 +66,4 @@ if __name__ == "__main__":
     indices, assignment = affinity_prop.solve()
     print(indices)
     print(assignment)
-    
+
