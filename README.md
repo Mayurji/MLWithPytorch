@@ -25,7 +25,12 @@ Objective of the repository is to learn and build machine learning models using 
 📌 Day 17 - K-Medoids \
 📌 Day 18 - TSNE \
 📌 Day 19 - ElasticNet Regression \
-📌 Day 20 - Factorization Machines
+📌 Day 20 - Spectral Clustering \
+📌 Day 21 - Latent Dirichlet \
+📌 Day 22 - Affinity Propagation \
+📌 Day 23 - Gradient Descent Algorithm \
+📌 Day 24 - Regularization Techniques
+
 
 ### Let me know if there is any correction. Feedback is welcomed.
 
