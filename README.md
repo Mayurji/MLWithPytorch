@@ -32,7 +32,7 @@ Objective of the repository is to learn and build machine learning models using 
 📌 Day 24 - Regularization Techniques \
 📌 Day 25 - RANSAC Algorithm \
 📌 Day 26 - Normalizations \
-📌 Day 27 - Multi-Layer Perceptron \ 
+📌 Day 27 - Multi-Layer Perceptron \
 📌 Day 28 - Activations
 
 
