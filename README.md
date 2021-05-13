@@ -33,10 +33,9 @@ Objective of the repository is to learn and build machine learning models using 
 📌 Day 25 - RANSAC Algorithm \
 📌 Day 26 - Normalizations \
 📌 Day 27 - Multi-Layer Perceptron \
-📌 Day 28 - Activations
-
-
-
+📌 Day 28 - Activations \
+📌 Day 29 - Optimizers \
+📌 Day 30 - Loss Functions
 
 ### Let me know if there is any correction. Feedback is welcomed.
 
