@@ -1,10 +1,28 @@
+"""
+Reference: https://towardsdatascience.com/t-sne-clearly-explained-d84c537f53a
+Playground: https://distill.pub/2016/misread-tsne/
+Wiki: https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding
+"""
 import torch
 import logging
 from sklearn.datasets import load_iris, load_digits, load_diabetes
 class TSNE:
-
+    """
+    The goal is to take a set of points in a high-dimensional space and find a faithful representation of those
+    points in a lower-dimensional space, typically the 2D plane. The algorithm is non-linear and adapts to the
+    underlying data, performing different transformations on different regions. Those differences can be a major
+    source of confusion.
+    """
     def __init__(self, n_components=2, preplexity=5.0, max_iter=1, learning_rate=200):
-
+        """
+        :param n_components:
+        :param preplexity: how to balance attention between local and global aspects of your data. The parameter is,
+        in a sense, a guess about the number of close neighbors each point has. Typical value between 5 to 50.
+        With small value of preplexity, the local groups are formed and with increasing preplexity global groups are
+        formed. A perplexity is more or less a target number of neighbors for our central point.
+        :param max_iter: Iterations to stabilize the results and converge.
+        :param learning_rate:
+        """
         self.max_iter = max_iter
         self.preplexity = preplexity
         self.n_components = n_components
@@ -16,10 +34,20 @@ class TSNE:
         self.preplexity_tries = 50
 
     def l2_distance(self, X):
+        """
+        :return: It helps in identifying the distance between the two distribution.
+        """
         sum_X = torch.sum(X * X, dim=1)
         return (-2* torch.mm(X, X.T) + sum_X).T + sum_X
 
     def get_pairwise_affinities(self, X):
+        """
+        :param X: High dimensional input
+        :return: a (Gaussian) probability distribution over pairs of high-dimensional objects in such a way that similar
+        objects are assigned a higher probability while dissimilar points are assigned a lower probability. To find
+        variance for this distribution we use Binary search. The variance is calculated between fixed preplexity given
+        by the user.
+        """
         affines = torch.zeros((self.n_samples, self.n_samples), dtype=torch.float32)
         target_entropy = torch.log(torch.scalar_tensor(self.preplexity))
         distance = self.l2_distance(X)
@@ -33,12 +61,21 @@ class TSNE:
         return affines
 
     def q_distribution(self, D):
+        """
+        A (Student t-distirbution)distribution is learnt in lower dimensional space, n_samples and n_components
+        (2 or 3 dimension), and similar to above method 'get_pairwise_affinities', we find the probability of the
+        data points with high probability for closer points and less probability for disimilar points.
+        """
         Q = 1.0 / (1.0 + D)
         Q[torch.eye(Q.shape[0]).byte()] = 0.0
         Q = Q.clip(min=1e-100)
         return Q
 
     def binary_search(self, dist, target_entropy):
+        """
+        SNE performs a binary search for the value of sigma that produces probability distribution with a fixed
+        perplexity that is specified by the user.
+        """
         precision_minimum = 0
         precision_maximum = 1.0e15
         precision = 1.0e5
@@ -48,6 +85,7 @@ class TSNE:
             beta = torch.exp(-dist / precision) / denominator
 
             g_beta = beta[beta > 0.0]
+            # Shannon Entropy
             entropy = -torch.sum(g_beta * torch.log2(g_beta))
             error = entropy - target_entropy
 
@@ -82,6 +120,9 @@ class TSNE:
 
             grads = torch.zeros(Y.shape)
             for i in range(self.n_samples):
+                """
+                Optimization using gradient to converge between the true P and estimated Q distrbution.
+                """
                 grad = 4 * torch.mm(((pmul * P[i] - Q_n[i]) * Q[i]).unsqueeze(0), Y[i] -Y)
                 grads[i] = grad
 
