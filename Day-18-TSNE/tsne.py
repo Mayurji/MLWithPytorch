@@ -35,7 +35,7 @@ class TSNE:
 
     def l2_distance(self, X):
         """
-        :return: It helps in identifying the distance between the two distribution.
+        :return: Distance between two vectors
         """
         sum_X = torch.sum(X * X, dim=1)
         return (-2* torch.mm(X, X.T) + sum_X).T + sum_X
