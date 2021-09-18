@@ -1,4 +1,4 @@
-![MLWithPyTorch](/mlwithpytorch1.png)
+![MLWithPyTorch](/mlwithpytorch.png)
 
 ## 30 Days Of Machine Learning Using Pytorch
 
