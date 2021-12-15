@@ -19,7 +19,6 @@ The objective of the repository is to learn and build machine learning models us
 <a href="https://patreon.com/startingBrain" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a>
 </span>
 
-
 ![MLWithPyTorch](/mlwithpytorch.png)
 
 **List of Algorithms Covered**
