@@ -13,7 +13,7 @@ The objective of the repository is to learn and build machine learning models us
 ![GitHub last commit](https://img.shields.io/github/last-commit/Mayurji/MLWithPytorch?color=red&style=plastic)
 
 <span class="badge-buymeacoffee">
-<a href="https://ko-fi.com/mayurjain" title="Donate to this project using Buy Me A Coffee"><img src="https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg" alt="Buy Me A Coffee donate button" /></a>
+<a href="https://ko-fi.com/mayurjain" title="Buy Me A Coffee"><img src="https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg" alt="Buy Me A Coffee donate button" /></a>
 </span>
 <span class="badge-patreon">
 <a href="https://patreon.com/startingBrain" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a>
