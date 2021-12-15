@@ -1,9 +1,15 @@
-## 30 Days Of Machine Learning Using Pytorch
+## Machine Learning Using Pytorch
 
 ![GitHub stars](https://img.shields.io/github/stars/Mayurji/MLWithPytorch?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/Mayurji/MLWithPytorch?style=social)
 ![GitHub watchers](https://img.shields.io/github/watchers/Mayurji/MLWithPytorch?style=social)
 ![GitHub followers](https://img.shields.io/github/followers/Mayurji?style=social)
+
+![GitHub repo size](https://img.shields.io/github/repo-size/Mayurji/MLWithPytorch?style=plastic)
+![GitHub language count](https://img.shields.io/github/languages/count/Mayurji/MLWithPytorch?style=plastic)
+![GitHub top language](https://img.shields.io/github/languages/top/Mayurji/MLWithPytorch?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/Mayurji/MLWithPytorch?color=red&style=plastic)
+
 
 
 ![MLWithPyTorch](/mlwithpytorch.png)
