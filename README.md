@@ -1,5 +1,7 @@
 ## Machine Learning Using Pytorch
 
+<!-- GitAds-Verify: UQ7D985JITW8GXGB5SJO91G1XYMZEHQK -->
+
 The objective of the repository is to learn and build machine learning models using Pytorch.
 
 ![GitHub stars](https://img.shields.io/github/stars/Mayurji/MLWithPytorch?style=social)
